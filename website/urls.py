@@ -7,6 +7,7 @@ from .views import Page2
 urlpatterns = [
     path('', TemplateView.as_view(template_name='index.html',
          extra_context={'title': 'My Title'})),
-    path('second', Page2.as_view()),
+    path('second', Page2.as_view(
+        extra_context={'title': 'Overridden from url'})),
 
 ]
